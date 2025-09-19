@@ -30,4 +30,4 @@ jobs:
 
     - name: Use GitHub Secret (API_KEY)
       run: |
-        echo "A chave da API está configurada como: ${{ secrets.API_KEY }}"
+        echo "A chave da API está configurada como: ${{ 'API_KEY' }}"
