@@ -27,3 +27,7 @@ jobs:
     - name: Run tests
       run: |
         PYTHONPATH=. pytest
+
+    - name: Use GitHub Secret (API_KEY)
+      run: |
+        echo "A chave da API está configurada como: ${{ secrets.API_KEY }}"
