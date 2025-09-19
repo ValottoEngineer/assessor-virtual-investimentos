@@ -15,3 +15,8 @@ def secure_data():
     if token != "Bearer chave_valida":
         return jsonify({"error": "Access Denied"}), 403
     return jsonify({"message": "Acesso autorizado"})
+
+# rota inicial
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({"message": "API Assessor Virtual de Investimentos está rodando!"})
