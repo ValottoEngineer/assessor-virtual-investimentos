@@ -1,3 +1,13 @@
+import logging
+
+# Configuração básica de logs
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[logging.StreamHandler()]
+)
+
+
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -20,3 +30,7 @@ def secure_data():
 @app.route("/", methods=["GET"])
 def index():
     return jsonify({"message": "API Assessor Virtual de Investimentos está rodando!"})
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
+
