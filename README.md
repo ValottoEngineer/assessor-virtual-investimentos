@@ -26,7 +26,7 @@ Criptografia → uso de variáveis de ambiente simulando segredos
 
 ▶️ Como rodar a aplicação
 
-Clonar o repositório:
+1. Clonar o repositório:
 
 git clone git clone https://github.com/SEU-USUARIO/projeto-cybersecurity.git
 cd projeto-cybersecurity/src
@@ -34,17 +34,17 @@ cd projeto-cybersecurity/src
 cd projeto-cybersecurity/src
 
 
-Instalar dependências:
+2. Instalar dependências:
 
 pip install -r requirements.txt
 
 
-Rodar a API:
+3. Rodar a API:
 
 python app.py
 
 
-Acessar:
+4. Acessar:
 
 http://127.0.0.1:5000/ → raiz
 
