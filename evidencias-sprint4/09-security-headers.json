@@ -1,0 +1,5 @@
+﻿{
+    "Content-Security-Policy":  "default-src \u0027self\u0027; frame-ancestors \u0027none\u0027; object-src \u0027none\u0027; base-uri \u0027self\u0027",
+    "X-Frame-Options":  "DENY",
+    "X-Content-Type-Options":  "nosniff"
+}
