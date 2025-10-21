@@ -6,23 +6,19 @@ A aplicação implementa uma API simples em Python + Flask, utilizada para exerc
 
 ⚠️ Atenção: Este não é um assessor oficial nem um produto pronto para produção. Trata-se de um projeto didático, criado apenas para fins de estudo.
 
-⚙️ Tecnologias
+⚙️ Tecnologias e Ferramentas
 
-Python 3.12
+Python 3.12 | Flask
 
-Flask
+SAST → Semgrep (análise estática de código)
 
-Ferramentas de segurança:
+SCA → pip-audit (verificação de dependências)
 
-SAST → Semgrep
+DAST → OWASP ZAP (testes dinâmicos de segurança)
 
-SCA → pip-audit
+Autenticação → JWT com RBAC (perfil user/admin)
 
-DAST → OWASP ZAP
-
-Autenticação → Token Bearer simples
-
-Criptografia → uso de variáveis de ambiente simulando segredos
+Criptografia → variáveis de ambiente para segredos [SECRET_KEY]
 
 ▶️ Como rodar a aplicação
 
@@ -44,24 +40,28 @@ pip install -r requirements.txt
 python app.py
 
 
-4. Acessar:
+Acesse:
 
-http://127.0.0.1:5000/ → raiz
+http://127.0.0.1:5000/ – endpoint raiz
 
-http://127.0.0.1:5000/investimentos → lista de investimentos
+/investimentos – lista de investimentos
 
-http://127.0.0.1:5000/secure-data → endpoint protegido
+/secure-data – rota protegida (JWT)
+
+/consent – gerenciamento de consentimento (LGPD)
 
 🔍 Testes de Segurança
 
-SAST (Semgrep) → análise estática de código
+| Tipo            | Ferramenta             | Descrição                                     |
+| --------------- | ---------------------- | --------------------------------------------- |
+| **SAST**        | Semgrep                | análise estática do código-fonte              |
+| **SCA**         | pip-audit              | auditoria de dependências Python              |
+| **DAST**        | OWASP ZAP              | simulação de ataques HTTP/HTTPS               |
+| **Auth / RBAC** | JWT + decorators Flask | controle de acesso por papéis                 |
+| **LGPD**        | Consent API            | registro e revogação de consentimento         |
+| **CI/CD**       | GitHub Actions         | execução automática de testes pytest + CodeQL |
 
-SCA (pip-audit) → auditoria de dependências
+🧾 Licença
 
-DAST (OWASP ZAP) → testes dinâmicos contra a API
-
-Autenticação e Autorização → verificação de acesso com/sem token
-
-Criptografia e Gestão de Segredos → uso de variáveis de ambiente
-
-As evidências dos testes encontram-se na pasta /evidencias.
+Projeto acadêmico – FIAP (2025).
+Uso restrito a fins educacionais.
